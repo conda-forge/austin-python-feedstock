@@ -1,5 +1,5 @@
 {% set name = "austin-python" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/austin-python-{{ version }}.tar.gz
-  sha256: 42ba109c031c8c004c348fbbe5c18f177761d3dc531917420de51fa77cdb1fab
+  sha256: 817b899b308d1235ec7426db94fa6f721960909c6b03d2d1ff0bb3ac01b01ef7
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   entry_points:
     - austin-compress = austin.format.compress:main
