@@ -29,7 +29,7 @@ requirements:
     - python
   run:
     - dataclasses
-    - protobuf >=3.12.2
+    - protobuf <4.0.0
     - psutil >=5.7.0
     - python
     - toml >=0.10.2
@@ -56,3 +56,4 @@ about:
 extra:
   recipe-maintainers:
     - siboehm
+    - matthiasdiener
