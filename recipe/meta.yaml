@@ -27,10 +27,10 @@ requirements:
     - sysroot_linux-64 2.17  # [linux64]
   host:
     - pip
-    - poetry
     - python
+    - hatchling
+    - hatch-vcs
   run:
-    - dataclasses
     - protobuf <4.0.0
     - psutil >=5.7.0
     - python
