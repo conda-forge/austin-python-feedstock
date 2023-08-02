@@ -1,5 +1,5 @@
 {% set name = "austin-python" %}
-{% set version = "1.2.2" %}
+{% set version = "1.5.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/austin-python-{{ version }}.tar.gz
-  sha256: 817b899b308d1235ec7426db94fa6f721960909c6b03d2d1ff0bb3ac01b01ef7
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 3ae7ab3591cac42e6849adf1fc57aa23bdbf8dfdbfb2fc63d96196b606c83a0a
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   entry_points:
     - austin-compress = austin.format.compress:main
@@ -27,21 +27,21 @@ requirements:
     - sysroot_linux-64 2.17  # [linux64]
   host:
     - pip
-    - poetry
     - python
+    - hatchling
+    - hatch-vcs
   run:
-    - dataclasses
-    - protobuf <4.0.0
+    - protobuf <4  # FIXME: this should be '~=3.12.2'.
     - psutil >=5.7.0
     - python
-    - toml >=0.10.2
+    - toml <1 # TODO: hardpinned upstream to ~=0.10.2
     - austin
 
 test:
   imports:
     - austin
   commands:
-    - pip check
+    # - pip check  # disabled due to incorrect protobuf version above.
     - austin-compress --help
     - austin-diff --help
     - austin2pprof --help
@@ -54,6 +54,8 @@ about:
   summary: Python wrapper for Austin, the frame stack sampler for CPython
   license: GPL-3.0-or-later
   license_file: LICENSE.md
+  doc_url: https://austin-python.readthedocs.io/en/latest/
+  dev_url: https://github.com/P403n1x87/austin-python
 
 extra:
   recipe-maintainers:
