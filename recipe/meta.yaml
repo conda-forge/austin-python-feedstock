@@ -34,7 +34,7 @@ requirements:
     - protobuf <4  # FIXME: this should be '~=3.12.2'.
     - psutil >=5.7.0
     - python
-    - toml
+    - toml <1 # TODO: hardpinned upstream to ~=0.10.2
     - austin
 
 test:
