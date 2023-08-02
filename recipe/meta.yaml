@@ -34,7 +34,7 @@ requirements:
     - protobuf <4  # FIXME: this should be '~=3.12.2'.
     - psutil >=5.7.0
     - python
-    - toml ~=0.10.2
+    - toml
     - austin
 
 test:
@@ -54,6 +54,8 @@ about:
   summary: Python wrapper for Austin, the frame stack sampler for CPython
   license: GPL-3.0-or-later
   license_file: LICENSE.md
+  doc_url: https://austin-python.readthedocs.io/en/latest/
+  dev_url: https://github.com/P403n1x87/austin-python
 
 extra:
   recipe-maintainers:
