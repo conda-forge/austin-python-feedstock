@@ -9,6 +9,10 @@ Package license: GPL-3.0-or-later
 
 Summary: Python wrapper for Austin, the frame stack sampler for CPython
 
+Development: https://github.com/P403n1x87/austin-python
+
+Documentation: https://austin-python.readthedocs.io/en/latest/
+
 Current build status
 ====================
 
