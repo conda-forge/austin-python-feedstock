@@ -1,5 +1,5 @@
 {% set name = "austin-python" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3ae7ab3591cac42e6849adf1fc57aa23bdbf8dfdbfb2fc63d96196b606c83a0a
+  sha256: b921a9cc0a4490da5c4bc5a3a090d4f524d965b9fdacdbf4b60eef7e48fb8bb6
 
 build:
   number: 0
