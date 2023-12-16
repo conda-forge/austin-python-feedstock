@@ -11,7 +11,7 @@ source:
   sha256: c99a692feaf452a04e5b8cbb11b230fbb6294bb9229bcf7b493d650557236290
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   entry_points:
     - austin-compress = austin.format.compress:main
