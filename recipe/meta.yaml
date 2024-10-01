@@ -11,7 +11,7 @@ source:
   sha256: c99a692feaf452a04e5b8cbb11b230fbb6294bb9229bcf7b493d650557236290
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   entry_points:
     - austin-compress = austin.format.compress:main
@@ -24,14 +24,13 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - sysroot_linux-64 2.17  # [linux64]
   host:
     - pip
     - python
     - hatchling
     - hatch-vcs
   run:
-    - protobuf <4  # FIXME: this should be '~=3.12.2'.
+    - protobuf <5  # FIXME: this should be '~=3.12.2'.
     - psutil >=5.7.0
     - python
     - toml <1 # TODO: hardpinned upstream to ~=0.10.2
