@@ -1,5 +1,5 @@
 {% set name = "austin-python" %}
-{% set version = "2.1.2" %}
+{% set version = "2.3.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6821bfc8918a3bddb7be34f3c913e385333f53edf27e293232e33a5c6346ac59
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ba073eeda7ab76c4986054c357b90bb60612292685bacebda22c90991d1feb21
 
 build:
   number: 0
